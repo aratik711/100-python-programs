@@ -16,3 +16,14 @@ If the output received is in decimal form, it should be rounded off to its neare
 In case of input data being supplied to the question, it should be assumed to be a console input.
 
 """
+
+import math
+
+input_str = input()
+L = list(map(int, input_str.split(",")))
+output_list = []
+C, H = 50, 30
+for i in L:
+    output_list.append(str(round(math.sqrt((2*C*i)/H))))
+
+print(",".join(output_list))
